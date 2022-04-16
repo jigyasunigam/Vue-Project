@@ -2,10 +2,13 @@
 <img class="logo" src="../assets/hm.jpg" />
 <h1>Sign UP</h1>
 <div class="register">
- <input type="text" v-model="name" placeholder="Enter Name"/>
- <input type="text" v-model="email" placeholder="Enter Email"/>
- <input type="password" v-model="password" placeholder="Enter Password"/>
+ <input type="text" v-model="name" placeholder="Enter Name" />
+ <input type="text" v-model="email" placeholder="Enter Email" />
+ <input type="password" v-model="password" placeholder="Enter Password" />
  <button v-on:click="SignUp">Sign Up</button>
+ <p>
+  <router-link to="./login">Login</router-link>
+ </p>
 </div>
 </template>
 
@@ -13,28 +16,35 @@
 import axios from "axios"
 export default {
  name: "SignUp",
- data()
- {
+ data() {
   return {
-   name:"",
-   email:"",
-   password:"",
+   name: "",
+   email: "",
+   password: "",
   }
  },
- methods:{
- async SignUp()
-  {
-   let result = await axios.post("http://localhost:3000/users",{
-    name:this.name,email:this.email,password:this.password
+ methods: {
+  async SignUp() {
+   let result = await axios.post("http://localhost:3000/users", {
+    name: this.name,
+    email: this.email,
+    password: this.password,
    });
-   console.warn(result);
-   if(result.status==201){
-    alert("fine");
+   if (result.status == 201) 
+   {
+    localStorage.setItem("user-info", JSON.stringify(result.data))
+    this.$router.push({name:"HomePage"})
    }
-   localStorage.setItem("user-info",JSON.stringify(result.data))
+  }
+ },
+ mounted()
+ {
+  let user = localStorage.getItem("user-info");
+  if(user){
+   this.$router.push({name:"HomePage"})
   }
  }
-}
+};
 </script>
 
 <style>
@@ -42,7 +52,7 @@ export default {
  width: 100px;
 }
 
-.register input{
+.register input {
  width: 300px;
  height: 40px;
  padding-left: 20px;
@@ -53,13 +63,13 @@ export default {
  border: 1px solid orangered;
 }
 
-.register button{
-width: 320px;
-height: 40px;
-border: 1px solid orangered;
-color: whitesmoke;
-font-size: x-large;
-background: orangered;
-cursor: pointer;
+.register button {
+ width: 320px;
+ height: 40px;
+ border: 1px solid orangered;
+ color: whitesmoke;
+ font-size: x-large;
+ background: orangered;
+ cursor: pointer;
 }
 </style>
