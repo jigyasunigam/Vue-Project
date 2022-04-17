@@ -25,7 +25,7 @@ When the details are filled and Sign Up button clicked the details gets saved in
 When the Logout button in the navbar clicked it deletes the data in localstorage as well as redirect user to login page:-<br/><br/><br/>
 ![Screenshot (500)](https://user-images.githubusercontent.com/71183625/163708369-f76b90d8-45ba-4df6-b67e-83f282ff6f29.png)<br/><br/><br/>
 ![Screenshot (501)](https://user-images.githubusercontent.com/71183625/163708374-2ca189c6-5d08-4b44-baf1-7fc2e1bf612f.png)<br/><br/><b>
-When the user fill the required data and if it get matched with the data in users database then the user will be redirec to the home page:-<br/><br/><br/>
+When the user fill the required data and if it get matched with the data in users database then the user will be redirect to the home page:-<br/><br/><br/>
 ![Screenshot (502)](https://user-images.githubusercontent.com/71183625/163708411-771c2c3e-313a-44ce-9cd5-71b0cbdf930a.png)<br/><br/><br/>
 When Add button is clicked a new form appear asking about hotel information and when the user clicks on Add Hotel button it redirected to home page with details appended to home table as well as json-server:-<br/><br/><br/>![Screenshot (504)](https://user-images.githubusercontent.com/71183625/163708667-94195e96-9402-4e14-9195-3f3d0b4d1845.png)
 ![Screenshot (507)](https://user-images.githubusercontent.com/71183625/163708668-b2560818-5272-400f-9ca0-0e71ad962eea.png)<br/><br/><br/>
