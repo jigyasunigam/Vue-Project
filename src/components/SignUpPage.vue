@@ -34,7 +34,6 @@ export default {
    {
     localStorage.setItem("user-info", JSON.stringify(result.data))
     this.$router.push({name:"HomePage"})
-    console.warn(result)
    }
   }
  },
