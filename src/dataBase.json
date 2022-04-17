@@ -1,4 +1,30 @@
 {
-  "users": []
-  
+  "users": [
+    {
+      "name": "1",
+      "email": "1",
+      "password": "1",
+      "id": 1
+    },
+    {
+      "name": "3",
+      "email": "3",
+      "password": "3",
+      "id": 2
+    },
+    {
+      "name": "5",
+      "email": "5",
+      "password": "5",
+      "id": 3
+    }
+  ],
+  "hotels": [
+    {
+      "name": "Blue Sun",
+      "address": "Lakeview Agra",
+      "contact": "11556677",
+      "id": 1
+    }
+  ]
 }

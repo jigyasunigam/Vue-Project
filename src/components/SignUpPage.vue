@@ -15,7 +15,7 @@
 <script>
 import axios from "axios"
 export default {
- name: "SignUp",
+ name: "SignUpPage",
  data() {
   return {
    name: "",
@@ -34,6 +34,7 @@ export default {
    {
     localStorage.setItem("user-info", JSON.stringify(result.data))
     this.$router.push({name:"HomePage"})
+    console.warn(result)
    }
   }
  },
@@ -48,28 +49,5 @@ export default {
 </script>
 
 <style>
-.logo {
- width: 100px;
-}
 
-.register input {
- width: 300px;
- height: 40px;
- padding-left: 20px;
- display: block;
- margin-bottom: 30px;
- margin-left: auto;
- margin-right: auto;
- border: 1px solid orangered;
-}
-
-.register button {
- width: 320px;
- height: 40px;
- border: 1px solid orangered;
- color: whitesmoke;
- font-size: x-large;
- background: orangered;
- cursor: pointer;
-}
 </style>
