@@ -1,4 +1,18 @@
 {
-  "users": [],
-  "hotels": []
+  "users": [
+    {
+      "name": "one",
+      "email": "one",
+      "password": "one",
+      "id": 1
+    }
+  ],
+  "hotels": [
+    {
+      "name": "two",
+      "address": "four",
+      "contact": "2",
+      "id": 1
+    }
+  ]
 }

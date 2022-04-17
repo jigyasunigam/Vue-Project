@@ -30,7 +30,6 @@ export default {
     this.$router.push({
      name: "HomePage"
     });
-    console.warn(result);
    }
   },
  },
